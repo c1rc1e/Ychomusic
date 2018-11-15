@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+a:14:{s:9:"app_begin";a:1:{i:0;s:28:"app\common\behavior\InitHook";}s:11:"module_init";a:0:{}s:12:"action_begin";a:0:{}s:11:"view_filter";a:1:{i:0;s:29:"app\common\behavior\FilterTpl";}s:9:"log_write";a:0:{}s:7:"app_end";a:0:{}s:10:"pageFooter";a:1:{i:0;s:19:"\addons\Links\Links";}s:12:"contentAfter";a:1:{i:0;s:23:"\addons\Comment\Comment";}s:16:"documentEditForm";a:1:{i:0;s:21:"\addons\Editor\Editor";}s:11:"articleEdit";a:1:{i:0;s:21:"\addons\Editor\Editor";}s:12:"topicComment";a:1:{i:0;s:21:"\addons\Editor\Editor";}s:11:"indexSlider";a:1:{i:0;s:21:"\addons\Slider\Slider";}s:3:"pay";a:1:{i:0;s:15:"\addons\Pay\Pay";}s:4:"file";a:1:{i:0;s:21:"\addons\Upload\Upload";}}

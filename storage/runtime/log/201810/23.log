@@ -1,0 +1,562 @@
+---------------------------------------------------------------
+[ 2018-10-23T19:35:52+08:00 ] 127.0.0.1 GET /install.php?s=/index/complete.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_hooks` [ RunTime:0.120001s ]
+[ sql ] [ SQL ] SELECT `name`,`addons` FROM `music_hooks` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_addons` [ RunTime:0.090000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('Links') [ RunTime:0.100000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('Comment') [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('Baidushare') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('Editor') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('Editor') [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('SyncLogin','Ads') [ RunTime:0.040000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('Editor') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('Slider') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('Template') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('SyncLogin') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('indexPay','Pay') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `music_addons` WHERE  `status` = 1  AND `name` IN ('Upload') [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:36:04+08:00 ] 127.0.0.1 GET /index.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_config` [ RunTime:0.040000s ]
+[ sql ] [ SQL ] SELECT `type`,`name`,`value` FROM `music_config` WHERE  `status` = 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_channel` [ RunTime:0.110001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`sort`,`target`,`create_time`,`update_time`,`status` FROM `music_channel` WHERE  `status` = 1 ORDER BY `sort` [ RunTime:0.210000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1  AND (  position & 1 = 1 ) ORDER BY update_time desc LIMIT 6 [ RunTime:0.050000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_slider` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`type`,`cover_url`,`link_title`,`link`,`level`,`description` FROM `music_slider` WHERE  (  status = 1 )  AND `status` = 1  AND `type` = 1 ORDER BY level desc,id desc LIMIT 6 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1  AND (  position & 1 = 1 ) ORDER BY create_time desc LIMIT 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1 ORDER BY listens desc LIMIT 12 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1 ORDER BY create_time desc LIMIT 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album` [ RunTime:0.100000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`type_id`,`type_name`,`artist_id`,`artist_name`,`add_uid`,`add_uname`,`cover_id`,`cover_url`,`hits`,`favtimes`,`digg`,`pub_time`,`company`,`position`,`introduce`,`create_time` FROM `music_album` WHERE  `status` = 1  AND (  position & 1 = 1 ) ORDER BY update_time desc LIMIT 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`type_id`,`type_name`,`artist_id`,`artist_name`,`add_uid`,`add_uname`,`cover_id`,`cover_url`,`hits`,`favtimes`,`digg`,`pub_time`,`company`,`position`,`introduce`,`create_time` FROM `music_album` WHERE  `status` = 1 ORDER BY create_time desc LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_artist` [ RunTime:0.050001s ]
+[ sql ] [ SQL ] SELECT * FROM `music_artist` WHERE  `status` = 1  AND (  position & 1 = 1 ) ORDER BY update_time desc LIMIT 9 [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_genre` [ RunTime:0.120000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_genre` WHERE  `status` = 1 ORDER BY id desc LIMIT 20 [ RunTime:0.080000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_member` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_member` WHERE  `status` = 1  AND `uid` <> 1 ORDER BY songs desc LIMIT 10 [ RunTime:0.060000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_links` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `id`,`type`,`title`,`cover_url`,`link`,`level` FROM `music_links` WHERE  (  status = 1 )  AND `status` = 1  AND `type` = 1 ORDER BY level desc,id desc LIMIT 50 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_addons` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `config` FROM `music_addons` WHERE  `status` = 1  AND `name` = 'Links' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_site` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_site` WHERE  `status` = 1  AND `appname` = 'about' ORDER BY id desc LIMIT 5 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_site` WHERE  `status` = 1  AND `appname` = 'help' ORDER BY id desc LIMIT 5 [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:36:50+08:00 ] 127.0.0.1 GET /admin.php
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+---------------------------------------------------------------
+[ 2018-10-23T19:41:21+08:00 ] 127.0.0.1 GET /index.php?s=/album.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_seo_rule` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `module`,`controller`,`action`,`title_rule`,`keywords_rule`,`description_rule`,`sort`,`is_sys`,`status` FROM `music_seo_rule` WHERE  `status` = 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_channel` [ RunTime:0.040000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album_type` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_album_type` WHERE  `status` = 1 ORDER BY id desc LIMIT 20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_album` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.070000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`type_id`,`type_name`,`artist_id`,`artist_name`,`add_uid`,`add_uname`,`cover_id`,`cover_url`,`hits`,`favtimes`,`digg`,`pub_time`,`company`,`position`,`introduce`,`create_time` FROM `music_album` WHERE  `status` = 1 ORDER BY create_time desc LIMIT 0,12 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1 ORDER BY listens desc LIMIT 15 [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_artist` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_artist` WHERE  `status` = 1 ORDER BY hits desc LIMIT 10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:41:54+08:00 ] 127.0.0.1 POST /admin.php?s=/login/access.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_ucenter_member` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_ucenter_member` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `music_ucenter_member`  SET `last_login_time`=1540294914,`last_login_ip`=2130706433  WHERE  `id` = 1 [ RunTime:0.060000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_member` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_member` WHERE  `uid` = 1 LIMIT 1 [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_member_group_link` [ RunTime:0.120000s ]
+[ sql ] [ SQL ] SELECT `group_id`,`end_time` FROM `music_member_group_link` WHERE  `uid` = 1  AND `end_time` > 1540294914 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_member_group` [ RunTime:0.120000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon_url`,`icon_font`,`alias`,`rule` FROM `music_member_group` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] UPDATE `music_member`  SET `login`=`login`+1,`last_login_time`=1540294914,`last_login_ip`=2130706433  WHERE  `uid` = 1 [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:41:59+08:00 ] 127.0.0.1 GET /admin.php?s=/index/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant ü‚¶ùºÓ£³Á§ªÚóëË°ûõÓûôÚéÆúë®ÖÔ¦ÌÒ©„Ìä×ğ™š™Ãô¯Á¾¬¸’¨­ì“ôèş¤ÀÔÊ¨ó‘õÙèæò„€¶ùæ»Ì“óŞ¼¢ÌÏ˜µÏ - assumed 'ü‚¶ùºÓ£³Á§ªÚóëË°ûõÓûôÚéÆúë®ÖÔ¦ÌÒ©„Ìä×ğ™š™Ãô¯Á¾¬¸’¨­ì“ôèş¤ÀÔÊ¨ó‘õÙèæò„€¶ùæ»Ì“óŞ¼¢ÌÏ˜µÏ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.070001s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.190000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%index/index%' ) LIMIT 1 [ RunTime:0.050000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.070000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 2 ORDER BY id desc LIMIT 20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album` [ RunTime:0.100000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_album` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_member` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_member` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_artist` [ RunTime:0.070000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_artist` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] select version() as v; [ RunTime:0.120000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:42:09+08:00 ] 127.0.0.1 GET /index.php?s=/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_channel` [ RunTime:0.080000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_slider` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album` [ RunTime:0.040000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_links` [ RunTime:0.030000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:42:09+08:00 ] 127.0.0.1 POST /admin.php?s=/update/check.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.050000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%update/check%' ) LIMIT 1 [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_config` [ RunTime:0.100000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `music_config` WHERE  `name` = 'jymusic_update_time' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `music_config` WHERE  `name` = 'jymusic_version' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:42:33+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/index%' ) LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.080001s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.050000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`artist_id`,`artist_name`,`rank_id`,`tags`,`create_time`,`update_time`,`status` FROM `music_songs` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_genre` [ RunTime:0.520001s ]
+[ sql ] [ SQL ] SELECT * FROM `music_genre` WHERE  `status` > -1 ORDER BY `sort` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_ranks` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_ranks` WHERE  `status` = 1  AND `is_sys` = 0 ORDER BY sort asc,id desc LIMIT 20 [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:42:42+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/index%' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`artist_id`,`artist_name`,`rank_id`,`tags`,`create_time`,`update_time`,`status` FROM `music_songs` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_ranks` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_ranks` WHERE  `status` = 1  AND `is_sys` = 0 ORDER BY sort asc,id desc LIMIT 20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:42:44+08:00 ] 127.0.0.1 GET /admin.php?s=/album/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.040000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%album/index%' ) LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_album` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`type_id`,`type_name`,`artist_id`,`artist_name`,`add_uid`,`add_uname`,`cover_id`,`cover_url`,`hits`,`favtimes`,`digg`,`pub_time`,`company`,`position`,`introduce`,`create_time`,`update_time`,`status` FROM `music_album` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album_type` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_album_type` WHERE  `status` = 1 ORDER BY id asc LIMIT 20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:46:43+08:00 ] 127.0.0.1 GET /admin.php?s=/artist/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%artist/index%' ) LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_artist` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_artist` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`uid`,`name`,`alias`,`index`,`type_name`,`type_id`,`cover_id`,`cover_url`,`rater`,`hits`,`favtimes`,`digg`,`position`,`region`,`recommend`,`introduce`,`create_time`,`update_time`,`status` FROM `music_artist` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:46:54+08:00 ] 127.0.0.1 GET /admin.php?s=/album/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%album/index%' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_album` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`type_id`,`type_name`,`artist_id`,`artist_name`,`add_uid`,`add_uname`,`cover_id`,`cover_url`,`hits`,`favtimes`,`digg`,`pub_time`,`company`,`position`,`introduce`,`create_time`,`update_time`,`status` FROM `music_album` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:46:56+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/index%' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`artist_id`,`artist_name`,`rank_id`,`tags`,`create_time`,`update_time`,`status` FROM `music_songs` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_ranks` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_ranks` WHERE  `status` = 1  AND `is_sys` = 0 ORDER BY sort asc,id desc LIMIT 20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:46:59+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/index.html&status=audit
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/index%' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.120000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 2 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`artist_id`,`artist_name`,`rank_id`,`tags`,`create_time`,`update_time`,`status` FROM `music_songs` WHERE  `status` = 2 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_ranks` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_ranks` WHERE  `status` = 1  AND `is_sys` = 0 ORDER BY sort asc,id desc LIMIT 20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:47:04+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/index/genre/1.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/index%' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1  AND `genre_id` = 1 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`artist_id`,`artist_name`,`rank_id`,`tags`,`create_time`,`update_time`,`status` FROM `music_songs` WHERE  `status` = 1  AND `genre_id` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_ranks` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_ranks` WHERE  `status` = 1  AND `is_sys` = 0 ORDER BY sort asc,id desc LIMIT 20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:47:05+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/index/genre/3.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/index%' ) LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.110000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1  AND `genre_id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`artist_id`,`artist_name`,`rank_id`,`tags`,`create_time`,`update_time`,`status` FROM `music_songs` WHERE  `status` = 1  AND `genre_id` = 3 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:47:07+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/index/genre/2.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/index%' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1  AND `genre_id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`artist_id`,`artist_name`,`rank_id`,`tags`,`create_time`,`update_time`,`status` FROM `music_songs` WHERE  `status` = 1  AND `genre_id` = 2 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_ranks` [ RunTime:0.070000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_ranks` WHERE  `status` = 1  AND `is_sys` = 0 ORDER BY sort asc,id desc LIMIT 20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:47:08+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/index%' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`artist_id`,`artist_name`,`rank_id`,`tags`,`create_time`,`update_time`,`status` FROM `music_songs` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:47:09+08:00 ] 127.0.0.1 GET /admin.php?s=/album/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%album/index%' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_album` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`type_id`,`type_name`,`artist_id`,`artist_name`,`add_uid`,`add_uname`,`cover_id`,`cover_url`,`hits`,`favtimes`,`digg`,`pub_time`,`company`,`position`,`introduce`,`create_time`,`update_time`,`status` FROM `music_album` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:56:08+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/index.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ error ] [8]Use of undefined constant ñ®Ç™ªÏş¿ - assumed 'ñ®Ç™ªÏş¿'
+[ error ] [8]Use of undefined constant •Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º - assumed '•Ôê¯Æ²°ÈÀğÉ˜ãøàü£°ûâ™ñ–ğŸˆäÕ¹å‰é¬¼›º'
+[ error ] [8]Use of undefined constant ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹ - assumed 'ãå»¹ò¨¿ıøßùßçæÅ»Ã›È‡úÀö—Ó¡ºÃ÷­§ŞèàÒ’ ĞŒÊì³ÓÕî—ğ¸Ÿëù–„Í¸¾’°ë¹'
+[ error ] [8]Use of undefined constant õ˜Ë - assumed 'õ˜Ë'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/index%' ) LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.040000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`artist_id`,`artist_name`,`rank_id`,`tags`,`create_time`,`update_time`,`status` FROM `music_songs` WHERE  `status` = 1 ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_ranks` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `music_ranks` WHERE  `status` = 1  AND `is_sys` = 0 ORDER BY sort asc,id desc LIMIT 20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:56:18+08:00 ] 127.0.0.1 GET /index.php?s=/genre/ywwq.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_genre` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_genre` WHERE  `status` = 1  AND `alias` = 'ywwq' LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_channel` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_genre` WHERE  `status` = 1 ORDER BY id desc LIMIT 20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1 ORDER BY listens desc LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `music_genre` WHERE  `status` = 1  AND `pid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `music_songs` WHERE  `status` = 1  AND `genre_id` IN (5) LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1  AND `genre_id` IN (5) ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:56:20+08:00 ] 127.0.0.1 GET /index.php?s=/api/actions/hits.html&callback=jQuery203049386857997097844_1540295778959&id=5&type=genre&_=1540295778960
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_genre` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `hits` FROM `music_genre` WHERE  `id` = 5 LIMIT 1 [ RunTime:0.010000s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:56:43+08:00 ] 127.0.0.1 GET /admin.php?s=/songs/create.html
+[ error ] [8]Use of undefined constant ²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦ - assumed '²ß»Å¬º½Åå±ñ• Ú‘®Üø¦ŞË’©…²ï†Åİ¸¥™ıÒÓ¼˜¹íŠÎåà”½–»œ³ˆ¯İáÍ”¨«ÌÍÅË ™ˆ¹ÓöÄ£†«…£ÀÃºüàí…Ì”òš¨›ÆõéŒÁ‹¦'
+[ error ] [8]Use of undefined constant úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí - assumed 'úÁ‹ŸÈ¶¥ëöè¦óÉ•ùÚáÎü·êÄ®ÔÑğàø»¦óı²”Æè¹³à£ÚÕìïĞÇÒß—Ï˜‚•Æ×æ¸¸ßóßÔò’èºú£íÜÆÈ²´¹„üŒã”Üü–òÄí'
+[ error ] [8]Use of undefined constant Ê¼ˆÊ¢¬ - assumed 'Ê¼ˆÊ¢¬'
+[ error ] [8]Use of undefined constant É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ - assumed 'É„¬ıºçº‡ú¯æ·Ò³ˆêéØ§àş¯äÌ¬ú‘ƒù½ÌşéÍ'
+[ error ] [8]Use of undefined constant èÌê•ÑùªÒ¯ - assumed 'èÌê•ÑùªÒ¯'
+[ error ] [8]Use of undefined constant ˆ¬†›ü‚ÂÌ - assumed 'ˆ¬†›ü‚ÂÌ'
+[ error ] [8]Use of undefined constant ½»ú²Í€äö - assumed '½»ú²Í€äö'
+[ error ] [8]Use of undefined constant ¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù - assumed '¸ÇàÕ€Ô‚óÒç¬œß¢¢ÑÊ©’ô•É´Ã¿ ­»“æ„ô¼…†ËÙˆÀ­ğìÊĞì£Ú–µÏ¬€„ï¿¥û¹„€¯Á…µß½Î¯»Ø€ËÅ£¦ÜÙö‰Ùúù'
+[ error ] [8]Use of undefined constant ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ - assumed 'ùÒÂß‚‡‹Õñ•ƒÔ¨‹²µ­±ÛæŒ'
+[ error ] [8]Use of undefined constant ˜Î–½™‘‘Üğ“ãüéÖ’ì«» - assumed '˜Î–½™‘‘Üğ“ãüéÖ’ì«»'
+[ error ] [8]Use of undefined constant ¶Ãºøˆ - assumed '¶Ãºøˆ'
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_menu` [ RunTime:0.290001s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`url`,`tip`,`icon` FROM `music_menu` WHERE  `pid` = 0  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `pid` FROM `music_menu` WHERE  (  pid !=0 AND url like '%songs/create%' ) LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 124 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_menu` WHERE  `id` = 123 LIMIT 1 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `group` FROM `music_menu` WHERE  `group` <> ''  AND `pid` = 123 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url` FROM `music_menu` WHERE  `pid` = 123  AND `hide` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url`,`icon`,`tip` FROM `music_menu` WHERE  `group` = 'éŸ³ä¹ç®¡ç†'  AND `pid` = 123  AND `hide` = 0 ORDER BY sort asc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_genre` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_genre` WHERE  `status` > -1 ORDER BY `sort` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_server` [ RunTime:1.300002s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`listen_url`,`down_url`,`image_url` FROM `music_server` WHERE  `status` = 1 ORDER BY id desc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_member_group` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`icon_url`,`icon_font`,`alias`,`rule` FROM `music_member_group` WHERE  `status` = 1 LIMIT 99 [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_addons` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT `config` FROM `music_addons` WHERE  `status` = 1  AND `name` = 'Upload' LIMIT 1 [ RunTime:0.010000s ]

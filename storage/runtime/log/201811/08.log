@@ -1,0 +1,40 @@
+---------------------------------------------------------------
+[ 2018-11-08T17:05:47+08:00 ] 127.0.0.1 GET /index.php?s=/api/actions/listen.html&callback=jQuery20308306737719102324_1541053722728&id=3&_=1541053722730
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028001s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.159005s ]
+[ sql ] [ SQL ] SELECT `listens` FROM `music_songs` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-11-08T17:06:14+08:00 ] 127.0.0.1 GET /index.php?s=/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028002s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_channel` [ RunTime:0.084005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.085005s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1  AND (  position & 1 = 1 ) ORDER BY update_time desc LIMIT 6 [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_slider` [ RunTime:0.077004s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`type`,`cover_url`,`link_title`,`link`,`level`,`description` FROM `music_slider` WHERE  (  status = 1 )  AND `status` = 1  AND `type` = 1 ORDER BY level desc,id desc LIMIT 6 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1  AND (  position & 1 = 1 ) ORDER BY create_time desc LIMIT 12 [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_genre` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1 ORDER BY listens desc LIMIT 12 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1 ORDER BY create_time desc LIMIT 12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_album` [ RunTime:0.070004s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`type_id`,`type_name`,`artist_id`,`artist_name`,`add_uid`,`add_uname`,`cover_id`,`cover_url`,`hits`,`favtimes`,`digg`,`pub_time`,`company`,`position`,`introduce`,`create_time` FROM `music_album` WHERE  `status` = 1  AND (  position & 1 = 1 ) ORDER BY update_time desc LIMIT 5 [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`type_id`,`type_name`,`artist_id`,`artist_name`,`add_uid`,`add_uname`,`cover_id`,`cover_url`,`hits`,`favtimes`,`digg`,`pub_time`,`company`,`position`,`introduce`,`create_time` FROM `music_album` WHERE  `status` = 1 ORDER BY create_time desc LIMIT 10 [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_artist` [ RunTime:0.061004s ]
+[ sql ] [ SQL ] SELECT * FROM `music_artist` WHERE  `status` = 1  AND (  position & 1 = 1 ) ORDER BY update_time desc LIMIT 9 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_genre` WHERE  `status` = 1 ORDER BY id desc LIMIT 20 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_member` [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SELECT * FROM `music_member` WHERE  `status` = 1  AND `uid` <> 1 ORDER BY songs desc LIMIT 10 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_links` [ RunTime:0.033002s ]
+[ sql ] [ SQL ] SELECT `id`,`type`,`title`,`cover_url`,`link`,`level` FROM `music_links` WHERE  (  status = 1 )  AND `status` = 1  AND `type` = 1 ORDER BY level desc,id desc LIMIT 50 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_site` [ RunTime:0.024001s ]
+[ sql ] [ SQL ] SELECT * FROM `music_site` WHERE  `status` = 1  AND `appname` = 'about' ORDER BY id desc LIMIT 5 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `music_site` WHERE  `status` = 1  AND `appname` = 'help' ORDER BY id desc LIMIT 5 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-11-08T17:10:46+08:00 ] 127.0.0.1 GET /index.php?s=/api/actions/listen.html&callback=jQuery20308306737719102324_1541053722728&id=2&_=1541053722731
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.029002s ]
+[ sql ] [ SQL ] SELECT `listens` FROM `music_songs` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-11-08T17:39:08+08:00 ] 127.0.0.1 GET /index.php?s=/api/songs.html&album=1&sub=true
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `music_songs` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`genre_id`,`album_id`,`album_name`,`order_id`,`artist_id`,`artist_name`,`tags`,`cover_url`,`cover_id`,`up_uid`,`up_uname`,`digg`,`bury`,`download`,`rater`,`listens`,`position`,`favtimes`,`score`,`coin`,`create_time` FROM `music_songs` WHERE  `status` = 1  AND `album_id` = 1 ORDER BY id desc LIMIT 20 [ RunTime:0.021000s ]

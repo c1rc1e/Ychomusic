@@ -1,0 +1,4 @@
+<?php
+//000002592000
+ exit();?>
+a:7:{i:0;a:6:{s:2:"id";i:1;s:5:"title";s:6:"娱乐";s:5:"alias";s:4:"yule";s:3:"pid";i:0;s:4:"sort";i:1;s:6:"status";i:1;}i:1;a:6:{s:2:"id";i:2;s:5:"title";s:6:"内地";s:5:"alias";s:5:"neidi";s:3:"pid";i:1;s:4:"sort";i:1;s:6:"status";i:1;}i:2;a:6:{s:2:"id";i:3;s:5:"title";s:6:"港台";s:5:"alias";s:7:"gangtai";s:3:"pid";i:1;s:4:"sort";i:2;s:6:"status";i:1;}i:3;a:6:{s:2:"id";i:5;s:5:"title";s:6:"头条";s:5:"alias";s:7:"toutiao";s:3:"pid";i:0;s:4:"sort";i:2;s:6:"status";i:1;}i:4;a:6:{s:2:"id";i:4;s:5:"title";s:6:"海外";s:5:"alias";s:6:"haiwai";s:3:"pid";i:1;s:4:"sort";i:3;s:6:"status";i:1;}i:5;a:6:{s:2:"id";i:6;s:5:"title";s:6:"八卦";s:5:"alias";s:5:"bagua";s:3:"pid";i:0;s:4:"sort";i:3;s:6:"status";i:1;}i:6;a:6:{s:2:"id";i:7;s:5:"title";s:6:"爆料";s:5:"alias";s:7:"baoliao";s:3:"pid";i:0;s:4:"sort";i:4;s:6:"status";i:1;}}

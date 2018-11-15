@@ -1,0 +1,4 @@
+<?php
+//000000086400
+ exit();?>
+a:2:{i:0;a:8:{s:2:"id";i:2;s:5:"title";s:16:"测试幻灯片2";s:4:"type";i:1;s:9:"cover_url";s:87:"http://ugc.cdn.qianqian.com/yinyueren/pic/cf602a2aeed378b781d6.jpg@w_1220,d_progressive";s:10:"link_title";s:6:"黑胶";s:4:"link";s:14:"http://v2.dev/";s:5:"level";i:0;s:11:"description";s:16:"测试幻灯片2";}i:1;a:8:{s:2:"id";i:1;s:5:"title";s:12:"黑胶制造";s:4:"type";i:1;s:9:"cover_url";s:87:"http://ugc.cdn.qianqian.com/yinyueren/pic/cf602a2aeed378b781d6.jpg@w_1220,d_progressive";s:10:"link_title";s:0:"";s:4:"link";s:18:"http://www.jyuu.cn";s:5:"level";i:0;s:11:"description";s:12:"黑胶制造";}}
